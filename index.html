@@ -1,14 +1,324 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <header>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="http://cdn.tailwindcss.com"></script>
+<header>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="http://cdn.tailwindcss.com"></script>
 
-    <link rel="stylesheet" href="tailwind.css" />
-    <title>Tailwind CSS</title>
+  <link rel="stylesheet" href="tailwind.css" />
+  <title>Tailwind CSS</title>
+</header>
+
+<body class="bg-slate-100">
+  <header class="bg-white px-6 shadow">
+    <div class="flex justify-between h-16 items-center max-w-8xl mx-auto">
+      <button class="rounded p-1 -ml-1 text-slate-500 hover:bg-sky-500 transition-colors hover:text-slate-100 focus:ring-2">
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          fill="none" viewBox="0 0 24 24" 
+          stroke-width="1.5" 
+          stroke="currentColor" 
+          class="h-6 w-6">
+          <path stroke-linecap="round" 
+          stroke-linejoin="round" 
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+      <div class="-mr-4 flex items-center">
+        <a  
+          class="text-sky-500 hover:text-sky-800 hover:rotate-180 duration-200" 
+          href="#">
+          <svg 
+          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
+          fill="currentColor" 
+          class="size-6">
+          <path fill-rule="evenodd" d="M8.478 1.6a.75.75 0 0 1 .273 1.026 3.72 3.72 0 0 0-.425 1.121c.058.058.118.114.18.168A4.491 4.491 0 0 1 12 2.25c1.413 0 2.673.651 3.497 1.668.06-.054.12-.11.178-.167a3.717 3.717 0 0 0-.426-1.125.75.75 0 1 1 1.298-.752 5.22 5.22 0 0 1 .671 2.046.75.75 0 0 1-.187.582c-.241.27-.505.52-.787.749a4.494 4.494 0 0 1 .216 2.1c-.106.792-.753 1.295-1.417 1.403-.182.03-.364.057-.547.081.152.227.273.476.359.742a23.122 23.122 0 0 0 3.832-.803 23.241 23.241 0 0 0-.345-2.634.75.75 0 0 1 1.474-.28c.21 1.115.348 2.256.404 3.418a.75.75 0 0 1-.516.75c-1.527.499-3.119.854-4.76 1.049-.074.38-.22.735-.423 1.05 2.066.209 4.058.672 5.943 1.358a.75.75 0 0 1 .492.75 24.665 24.665 0 0 1-1.189 6.25.75.75 0 0 1-1.425-.47 23.14 23.14 0 0 0 1.077-5.306c-.5-.169-1.009-.32-1.524-.455.068.234.104.484.104.746 0 3.956-2.521 7.5-6 7.5-3.478 0-6-3.544-6-7.5 0-.262.037-.511.104-.746-.514.135-1.022.286-1.522.455.154 1.838.52 3.616 1.077 5.307a.75.75 0 1 1-1.425.468 24.662 24.662 0 0 1-1.19-6.25.75.75 0 0 1 .493-.749 24.586 24.586 0 0 1 4.964-1.24h.01c.321-.046.644-.085.969-.118a2.983 2.983 0 0 1-.424-1.05 24.614 24.614 0 0 1-4.76-1.05.75.75 0 0 1-.516-.75c.057-1.16.194-2.302.405-3.417a.75.75 0 0 1 1.474.28c-.164.862-.28 1.74-.345 2.634 1.237.371 2.517.642 3.832.803.085-.266.207-.515.359-.742a18.698 18.698 0 0 1-.547-.08c-.664-.11-1.311-.612-1.417-1.404a4.535 4.535 0 0 1 .217-2.103 6.788 6.788 0 0 1-.788-.751.75.75 0 0 1-.187-.583 5.22 5.22 0 0 1 .67-2.04.75.75 0 0 1 1.026-.273Z" clip-rule="evenodd" />
+          </svg>
+        </a>
+        <div class="space-x-8 xl:flex ml-8 hidden">
+          <a class="text-slate-600 px-3 py-2 transition-colors hover:text-sky-500" href="#">Home</a>
+          <a class="text-slate-600 px-3 py-2 transition-colors hover:text-sky-500" href="#">About</a>
+          <a class="text-slate-600 px-3 py-2 transition-colors hover:text-sky-500" href="#">Blog</a>
+          <a class="text-slate-600 px-3 py-2 transition-colors hover:text-sky-500" href="#">Contacto</a>
+        </div>
+      </div>
+      <div class="flex">
+        <button class=" rounded-full text-slate-500 transition-colors hover:text-sky-500 focus:ring-2 focus:ring-slate-200">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
+              <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+              <path fill-rule="evenodd" d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 0 1 0-1.113ZM17.25 12a5.25 5.25 0 1 1-10.5 0 5.25 5.25 0 0 1 10.5 0Z" clip-rule="evenodd" />
+          </svg>
+        </button>
+        <button class="ml-4 rounded-full text-slate-500 transition-colors hover:text-sky-500 focus:ring-2 focus:ring-offset-1 focus:ring-slate-200">
+          <img
+            class="h-6 w-6 rounded-full"
+            src="https://ui-avatars.com/api?name=Camilo+Urbano" 
+            alt="Camilo Urbano">
+        </button>
+      </div>
+    </div>
+    <div class="hidden space-y-1 border-t py-3 pt-2 xl:hidden">
+      <a 
+        href="#" 
+        class="block rounded-md px-3 py-2 bg-sky-500 text-white">
+        Home
+     </a>
+      <a 
+        href="#" 
+        class="block rounded-md px-3 py-2 text-slate-700 hover:bg-sky-500 hover:text-white transition-colors">
+        About
+      </a>
+      <a 
+        href="#" 
+        class="block rounded-md px-3 py-2 text-slate-700 hover:bg-sky-500 hover:text-white transition-colors">
+        Blog
+      </a>
+      <a 
+        href="#" 
+        class="block rounded-md px-3 py-2 text-slate-700 hover:bg-sky-500 hover:text-white transition-colors">
+        Contacto
+      </a>
+    </div>
   </header>
-  <body>
-    <h1 class="text-3xl font-bold underline mt-0">Hello World!</h1>
-  </body>
+  <main class="p-4">
+    <div class="masx-w-6xl mt-4 mx-auto grid xl:grid-cols-2 lg:grid-cols-3 gap-4">
+      <article class="bg-white shadow flex flex-col rounded overflow-hidden">
+        <div class="h-52">
+          <img 
+            class="h-full w-full object-cover object-center" 
+            src="/img/ING1.jpeg" 
+            alt="Desarrollo de una API con laravel"
+          />
+        </div>
+        <div class="space-y-3 p-5 flex-1">
+          <h3 class="text-sm font-semibold text-sky-500">
+            Laravel
+          </h3>
+          <h2 class="text-xl font-semibold leading-tight text-slate-900">
+            Desarrollo de una API con laravel
+          </h2>
+          <p class="text-slate-700 hidden xl:block">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis cum corrupti sapiente dolorem quam blanditiis velit dolore rerum fugiat quae perferendis eos, facere voluptate pariatur sed eius explicabo molestiae nihil.
+          </p>
+        </div>
+        <div class="flex space-x-2 p-5">
+          <img
+            class="h-10 w-10 rounded-full"
+            src="http://ui-avatars.com/api?name=Camilo Urbano" 
+            alt="Camilo Urbano"
+          />
+          <div class="flex flex-col justify-center">
+            <span 
+              class="text-sm font-semibold leading-4 text-slate-600"
+              >
+              Camilo Urbano
+            </span>
+            <span class="text-sm text-slate-500">
+              Agosto 30, 2024
+            </span>
+          </div>
+        </div>
+      </article>
+      <article class="bg-white shadow flex flex-col rounded overflow-hidden">
+        <div class="h-52">
+          <img 
+            class="h-full w-full object-cover object-center" 
+            src="/img/ING2.jpeg" 
+            alt="Desarrollo de una API con laravel"
+          />
+        </div>
+        <div class="space-y-3 p-5 flex-1">
+          <h3 class="text-sm font-semibold text-sky-500">
+            Laravel
+          </h3>
+          <h2 class="text-xl font-semibold leading-tight text-slate-900">
+            Desarrollo de una API con laravel
+          </h2>
+          <p class="text-slate-700 hidden xl:block">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis cum corrupti sapiente dolorem quam blanditiis velit dolore rerum fugiat quae perferendis eos, facere voluptate pariatur sed eius explicabo molestiae nihil.
+          </p>
+        </div>
+        <div class="flex space-x-2 p-5">
+          <img
+            class="h-10 w-10 rounded-full"
+            src="http://ui-avatars.com/api?name=Camilo Urbano" 
+            alt="Camilo Urbano"
+          />
+          <div class="flex flex-col justify-center">
+            <span 
+              class="text-sm font-semibold leading-4 text-slate-600"
+              >
+              Camilo Urbano
+            </span>
+            <span class="text-sm text-slate-500">
+              Agosto 30, 2024
+            </span>
+          </div>
+        </div>
+      </article>
+      <article class="bg-white shadow flex flex-col rounded overflow-hidden">
+        <div class="h-52">
+          <img 
+            class="h-full w-full object-cover object-center" 
+            src="/img/ING3.jpeg" 
+            alt="Desarrollo de una API con laravel"
+          />
+        </div>
+        <div class="space-y-3 p-5 flex-1">
+          <h3 class="text-sm font-semibold text-sky-500">
+            Laravel
+          </h3>
+          <h2 class="text-xl font-semibold leading-tight text-slate-900">
+            Desarrollo de una API con laravel
+          </h2>
+          <p class="text-slate-700 hidden xl:block">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis cum corrupti sapiente dolorem quam blanditiis velit dolore rerum fugiat quae perferendis eos, facere voluptate pariatur sed eius explicabo molestiae nihil.
+          </p>
+        </div>
+        <div class="flex space-x-2 p-5">
+          <img
+            class="h-10 w-10 rounded-full"
+            src="http://ui-avatars.com/api?name=Camilo Urbano" 
+            alt="Camilo Urbano"
+          />
+          <div class="flex flex-col justify-center">
+            <span 
+              class="text-sm font-semibold leading-4 text-slate-600"
+              >
+              Camilo Urbano
+            </span>
+            <span class="text-sm text-slate-500">
+              Agosto 30, 2024
+            </span>
+          </div>
+        </div>
+      </article> 
+      <article class="bg-white shadow flex flex-col rounded overflow-hidden">
+        <div class="h-52">
+          <img 
+            class="h-full w-full object-cover object-center" 
+            src="/img/ING4.jpeg" 
+            alt="Desarrollo de una API con laravel"
+          />
+        </div>
+        <div class="space-y-3 p-5 flex-1">
+          <h3 class="text-sm font-semibold text-sky-500">
+            Laravel
+          </h3>
+          <h2 class="text-xl font-semibold leading-tight text-slate-900">
+            Desarrollo de una API con laravel
+          </h2>
+          <p class="text-slate-700 hidden xl:block">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis cum corrupti sapiente dolorem quam blanditiis velit dolore rerum fugiat quae perferendis eos, facere voluptate pariatur sed eius explicabo molestiae nihil.
+          </p>
+        </div>
+        <div class="flex space-x-2 p-5">
+          <img
+            class="h-10 w-10 rounded-full"
+            src="http://ui-avatars.com/api?name=Camilo Urbano" 
+            alt="Camilo Urbano"
+          />
+          <div class="flex flex-col justify-center">
+            <span 
+              class="text-sm font-semibold leading-4 text-slate-600"
+              >
+              Camilo Urbano
+            </span>
+            <span class="text-sm text-slate-500">
+              Agosto 30, 2024
+            </span>
+          </div>
+        </div>
+      </article> 
+      <article class="bg-white shadow flex flex-col rounded overflow-hidden">
+        <div class="h-52">
+          <img 
+            class="h-full w-full object-cover object-center" 
+            src="/img/ING5.jpeg" 
+            alt="Desarrollo de una API con laravel"
+          />
+        </div>
+        <div class="space-y-3 p-5 flex-1">
+          <h3 class="text-sm font-semibold text-sky-500">
+            Laravel
+          </h3>
+          <h2 class="text-xl font-semibold leading-tight text-slate-900">
+            Desarrollo de una API con laravel
+          </h2>
+          <p class="text-slate-700 hidden xl:block">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis cum corrupti sapiente dolorem quam blanditiis velit dolore rerum fugiat quae perferendis eos, facere voluptate pariatur sed eius explicabo molestiae nihil.
+          </p>
+        </div>
+        <div class="flex space-x-2 p-5">
+          <img
+            class="h-10 w-10 rounded-full"
+            src="http://ui-avatars.com/api?name=Camilo Urbano" 
+            alt="Camilo Urbano"
+          />
+          <div class="flex flex-col justify-center">
+            <span 
+              class="text-sm font-semibold leading-4 text-slate-600"
+              >
+              Camilo Urbano
+            </span>
+            <span class="text-sm text-slate-500">
+              Agosto 30, 2024
+            </span>
+          </div>
+        </div>
+      </article>
+    </div>     
+  </main>
+  <footer class="py-10">
+    <div class="flex flex-col xl:flex-row xl:justify-between max-w-6xl mx-auto items-center space-y-4 xl:space-y-0 ">
+      <div class="text-center text-sm text-slate-600">
+        2023 Aprendible All Rights Reserved
+      </div>
+      <div class="flex space-x-4">
+        <a href="#">
+          <svg 
+            class="w-6 fill-current text-slate-700 duration-300 hover:text-[#1877F2]" 
+            role="img" 
+            viewBox="0 0 24 24" 
+            xmlns="http://www.w3.org/2000/svg"><title>Facebook</title><path 
+            d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/>
+          </svg>
+        </a>
+        <a href="#">
+          <svg 
+            class="w-6 fill-current text-slate-700 duration-300 hover:text-[#9146FF]" 
+            role="img" viewBox="0 0 24 24" 
+            xmlns="http://www.w3.org/2000/svg"><title>Twitch</title><path 
+            d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/>
+          </svg>
+        </a>      
+        <a href="#">
+          <svg 
+            class="w-6 fill-current text-slate-700 duration-300 hover:text-[#000000]" 
+            role="img" 
+            viewBox="0 0 24 24" 
+            xmlns="http://www.w3.org/2000/svg"><title>X</title><path 
+            d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/>
+          </svg>
+        </a>
+        <a href="#">
+          <svg 
+            class="w-6 fill-current text-slate-700 duration-300 hover:text-[#181717]"        
+            role="img" 
+            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path 
+            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+          </svg>
+        </a>
+        <a href="#">
+          <svg 
+            class="w-6 fill-current text-slate-700 duration-300 hover:text-[#E4405F]" 
+            role="img" 
+            viewBox="0 0 24 24" 
+            xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
 </html>
